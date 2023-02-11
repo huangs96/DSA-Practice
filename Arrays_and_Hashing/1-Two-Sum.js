@@ -10,6 +10,6 @@ const twoSum = function(nums, target) {
     hash[n] = i;
   }
   return [];
-}
+};
 
 console.log(twoSum([1, 2, 3], 5)); // [1, 2]
