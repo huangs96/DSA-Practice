@@ -16,3 +16,7 @@ class Solution:
             return True
         else:
             return False
+s = 'rat'
+t = 'tar'
+solutionInstantiate = Solution()
+print(solutionInstantiate.isAnagram(s, t))
