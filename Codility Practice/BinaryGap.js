@@ -4,7 +4,7 @@
 // 2. 
 function solution(N) {
   const binary = N.toString(2);
-  console.log('binary', binary);
+  console.log('binary', typeof(binary));
 }
 
 solution(1041);
