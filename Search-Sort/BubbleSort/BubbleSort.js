@@ -18,6 +18,7 @@ const bubbleSort = (arr) => {
     console.log('arr1', test.arr1);
   };
   console.log('arr2', test.arr1);
+  return test.arr1;
 };
 
 console.log(bubbleSort(test.arr1));
