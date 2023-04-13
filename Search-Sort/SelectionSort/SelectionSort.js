@@ -11,7 +11,13 @@ const selectionSort = (arr) => {
         //minimum index is now acheived through first iteration
       };
     };
+
+    if (minimum !== x) {
+      [arr[x], arr[minimum]] = [arr[minimum], arr[x]];
+      console.log('swap check', arr)
+    }
   };
+  console.log('swap check22222', arr);
 };
 
 console.log(selectionSort(arr));
