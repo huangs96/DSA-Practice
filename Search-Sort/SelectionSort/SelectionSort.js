@@ -1,9 +1,17 @@
-const arr = [7,3,2,6,1,4,5,8,9,10];
+const arr = [77,31,28,21,14,41,15,18,49,10];
 
 const selectionSort = (arr) => {
+  //initiate first index number as smallest number
   for (let x=0; x<arr.length; x++) {
     let minimum = x;
-    
+    //second loop to compare elements next to arr[x]
+    for (let y=x+1; y<arr.length; y++) {
+      if (arr[y] < arr[minimum]) {
+        minimum = y;
+        //minimum index is now acheived through first iteration
+      };
+    };
+  };
+};
 
-  }
-}
+console.log(selectionSort(arr));
