@@ -11,7 +11,7 @@ let recursiveBinarySearch = (arr, x, start, end) => {
 
   //if midpoint of arr is X, return true
   if (arr[mid] === x) {
-    return true;
+    return `index ${mid} is the element ${arr[mid]}`;
   };
 
   //if midpoint is greater than x, we know that x is between 0 and midpoint. We want to do recursive search with start as beginning of array and end as midpoint-1
@@ -20,6 +20,8 @@ let recursiveBinarySearch = (arr, x, start, end) => {
     //else if mid point is less than x, we know that x is between midpoint and end. Recursively search arr with mid+1 as starting point and last index of arr being end.
   } else {
     return recursiveBinarySearch(arr, x, mid+1, end);
-  }
+  };
 
-}
+};
+
+console.log(recursiveBinarySearch(test.sortedArr, 5, 0, test.sortedArr.length-1));
