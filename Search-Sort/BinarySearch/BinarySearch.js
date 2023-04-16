@@ -24,4 +24,15 @@ let recursiveBinarySearch = (arr, x, start, end) => {
 
 };
 
-console.log(recursiveBinarySearch(test.sortedArr, 5, 0, test.sortedArr.length-1));
+// console.log(recursiveBinarySearch(test.sortedArr, 5, 0, test.sortedArr.length-1));
+
+let sortedArrToBST = (arr, start, end) => {
+  if (start > end) {
+    return null;
+  };
+
+  let mid = parseInt((start + end) / 2);
+  console.log('mid', mid);
+};
+
+console.log('sortedArrToBST', sortedArrToBST(test.sortedArr, 0, test.sortedArr.length-1));
