@@ -42,6 +42,9 @@ let sortedArrToBST = (arr, start, end) => {
   let mid = parseInt((start + end) / 2);
   let root = new Node(arr[mid]);
   console.log('root', root);
+
+  root.left = sortedArrToBST(arr, 0, arr[mid] - 1);
+  root.right = sortedArrToBST(arr, arr[mid] + 1, arr.length-1);
   
 };
 
