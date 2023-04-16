@@ -40,12 +40,33 @@ let sortedArrToBST = (arr, start, end) => {
   };
 
   let mid = parseInt((start + end) / 2);
-  let root = new Node(arr[mid]);
-  console.log('root', root);
-
-  root.left = sortedArrToBST(arr, 0, arr[mid] - 1);
-  root.right = sortedArrToBST(arr, arr[mid] + 1, arr.length-1);
+  let node = new Node(arr[mid]);
+  
+  node.left = sortedArrToBST(arr, start, mid - 1);
+  node.right = sortedArrToBST(arr, mid + 1, end);
+  return node;
   
 };
 
-console.log('sortedArrToBST', sortedArrToBST(test.sortedArr, 0, test.sortedArr.length-1));
+// console.log('sortedArrToBST', sortedArrToBST(test.sortedArr, 0, test.sortedArr.length-1));
+
+let preOrder = (node) => {
+
+  //base case
+  if (node == null) {
+    return;
+  };
+
+  console.log(node.data)
+  console.log(node.left)
+  console.log(node.right);
+  preOrder(node.left);
+  preOrder(node.right);
+
+};
+
+let exampleBST = sortedArrToBST(test.sortedArr, 0, test.sortedArr.length-1);
+
+
+console.log(preOrder(exampleBST));
+
