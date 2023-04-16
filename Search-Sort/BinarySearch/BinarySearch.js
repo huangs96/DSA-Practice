@@ -57,11 +57,11 @@ let preOrder = (node) => {
     return;
   };
 
+  preOrder(node.left);
+  preOrder(node.right);
   console.log(node.data)
   console.log(node.left)
   console.log(node.right);
-  preOrder(node.left);
-  preOrder(node.right);
 
 };
 
