@@ -26,13 +26,23 @@ let recursiveBinarySearch = (arr, x, start, end) => {
 
 // console.log(recursiveBinarySearch(test.sortedArr, 5, 0, test.sortedArr.length-1));
 
+class Node {
+  constructor(d) {
+    this.data = d;
+    this.left = null;
+    this.right = null;
+  }
+}
+
 let sortedArrToBST = (arr, start, end) => {
   if (start > end) {
     return null;
   };
 
   let mid = parseInt((start + end) / 2);
-  console.log('mid', mid);
+  let root = new Node(arr[mid]);
+  console.log('root', root);
+  
 };
 
 console.log('sortedArrToBST', sortedArrToBST(test.sortedArr, 0, test.sortedArr.length-1));
