@@ -31,9 +31,6 @@ x = 10
 # Function call
 result = rBinary_search(arr, 0, len(arr)-1, x)
 
-
-
-
 # Iterative Binary Search Function
 # It returns index of x in given array arr if present,
 # else returns -1
